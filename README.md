@@ -1,4 +1,1 @@
-# react-js-course
-Updated React.js course including Hooks, Redux, React Routing, Animations and Next.js 
-
-![alt text](https://i.imgur.com/JDsEO0M.png "React course banner")
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
