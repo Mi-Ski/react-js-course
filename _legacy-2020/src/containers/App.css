@@ -1,0 +1,19 @@
+*{
+  margin-top: 10px;
+  margin-top: 10px;
+
+}
+
+.App{
+  text-align: center;
+}
+
+
+button{
+  background-color: rgba(0, 84, 105, 0);
+  border: 1px solid white;
+  border-radius: 1px;
+  padding: 8px;
+  color:white;
+  cursor: pointer;
+}
