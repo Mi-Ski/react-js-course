@@ -23,7 +23,7 @@
 			"editorLineNumber.foreground": "#59ff99"
 		},
 		"[Default Dark+]": {
-			// "editor.background": "#181818",
+			"editor.background": "#181818",
 			"statusBar.background": "#181818"
 		},
 		"[Monokai Pro]": {
