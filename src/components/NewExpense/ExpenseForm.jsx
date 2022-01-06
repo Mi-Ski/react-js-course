@@ -6,6 +6,8 @@ const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
+
+  const [formVisible, setFormVisible] = useState(false);
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: '',
   //   enteredAmount: '',
@@ -44,7 +46,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -52,7 +54,21 @@ const ExpenseForm = (props) => {
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
+    showFormHandler();
   };
+
+  const showFormHandler = () => {
+    setFormVisible( prev => !prev)
+    console.log(formVisible);
+  }
+
+  if (!formVisible) {
+    return (
+      <div className='new-expense__actions'>
+        <button onClick={showFormHandler}>Show form</button>
+      </div>
+    )
+  }
 
   return (
     <form onSubmit={submitHandler}>
@@ -87,8 +103,10 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button onClick={showFormHandler}>Cancel</button>
         <button type='submit'>Add Expense</button>
       </div>
+      
     </form>
   );
 };

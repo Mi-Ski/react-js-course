@@ -52,7 +52,6 @@
 			]
 		}
 	},
-  "vim.vimrc.enable": true,
 	"files.exclude": {
 		".gitignore": true,
 		"**/ErrorBoundary": true,
