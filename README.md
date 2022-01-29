@@ -12,7 +12,7 @@
  - [x] 06-styling
  - [x] 07-debugging
  - [x] 08-practice-project
- - [ ] 09-fragments-portals-refs
+ - [x] 09-fragments-portals-refs
  - [ ] 10-side-effects-reducers-context-api
  - [ ] 11-practice-food-order-app
  - [ ] 12-a-look-behind-the-scenes
