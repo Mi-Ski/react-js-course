@@ -10,7 +10,7 @@
  - [x] 04-react-state-events
  - [x] 05-rendering-lists-conditional-content
  - [x] 06-styling
- - [ ] 07-debugging
+ - [x] 07-debugging
  - [ ] 08-practice-project
  - [ ] 09-fragments-portals-refs
  - [ ] 10-side-effects-reducers-context-api
