@@ -11,7 +11,7 @@
  - [x] 05-rendering-lists-conditional-content
  - [x] 06-styling
  - [x] 07-debugging
- - [ ] 08-practice-project
+ - [x] 08-practice-project
  - [ ] 09-fragments-portals-refs
  - [ ] 10-side-effects-reducers-context-api
  - [ ] 11-practice-food-order-app
