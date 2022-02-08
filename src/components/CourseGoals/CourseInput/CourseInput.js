@@ -1,4 +1,3 @@
-import { is } from '@babel/types';
 import React, { useState } from 'react';
 
 import Button from '../../UI/Button/Button';
