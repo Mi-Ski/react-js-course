@@ -9,7 +9,7 @@
  - [x] 03-react-basics-working-with-components
  - [x] 04-react-state-events
  - [x] 05-rendering-lists-conditional-content
- - [ ] 06-styling
+ - [x] 06-styling
  - [ ] 07-debugging
  - [ ] 08-practice-project
  - [ ] 09-fragments-portals-refs
