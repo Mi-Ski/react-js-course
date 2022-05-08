@@ -42,13 +42,11 @@ const Login = (props) => {
 	// email & password onchange functions
 	const emailChangeHandler = (event) => {
 		dispatchEmail({ type: 'USR_INPUT', value: event.target.value });
-
 		setFormIsValid(emailState.isValid && passwordState.isValid);
 	};
 
 	const passwordChangeHandler = (event) => {
 		dispatchPassword({ value: event.target.value, type: 'USR_INPUT' });
-
 		setFormIsValid(emailState.isValid && passwordState.isValid);
 	};
 
