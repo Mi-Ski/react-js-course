@@ -14,7 +14,7 @@ ha
  - [x] 07-debugging
  - [x] 08-practice-project
  - [x] 09-fragments-portals-refs
- - [ ] 10-side-effects-reducers-context-api
+ - [x] 10-side-effects-reducers-context-api
  - [ ] 11-practice-food-order-app
  - [ ] 12-a-look-behind-the-scenes
  - [ ] 13-class-based-cmp
