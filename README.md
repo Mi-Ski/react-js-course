@@ -1,5 +1,4 @@
 # React - The Complete Guide
-ha
 
 ![academind react logo](https://i.imgur.com/UJn28OT.png)
 ##
