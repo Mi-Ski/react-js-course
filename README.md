@@ -16,7 +16,7 @@
  - [x] 10-side-effects-reducers-context-api
  - [x] 11-practice-food-order-app
  - [x] 12-a-look-behind-the-scenes
- - [ ] 13-class-based-cmp
+ - [x] 13-class-based-cmp
  - [ ] 14-sending-http-requests
  - [ ] 15-building-custom-react-hooks
  - [ ] 16-working-with-forms
