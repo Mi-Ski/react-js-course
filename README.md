@@ -18,7 +18,7 @@
  - [x] 12-a-look-behind-the-scenes
  - [x] 13-class-based-cmp
  - [x] 14-sending-http-requests
- - [ ] 15-building-custom-react-hooks
+ - [x] 15-building-custom-react-hooks
  - [ ] 16-working-with-forms
  - [ ] 17-practice-food-order-http-forms
  - [ ] 18-diving-into-redux
