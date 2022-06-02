@@ -1,70 +1,41 @@
 import React, { useEffect, useState, useCallback } from "react";
 
-import MoviesList from "./components/MoviesList";
-import "./App.css";
+import Tasks from "./components/Tasks/Tasks";
+import NewTask from "./components/NewTask/NewTask";
+import useHttp from "./hooks/use-http";
 
 function App() {
-	const [movies, setMovies] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const [error, setError] = useState(null);
+	const [tasks, setTasks] = useState([]);
 
-	const fetchMoviesHandler = useCallback(async () => {
-		setIsLoading(true);
-		setError(null);
-		try {
-			const response = await fetch(
-				"https://react-app-869e8-default-rtdb.europe-west1.firebasedatabase.app/movies.json", {
-					method: "POST",
-					body: JSON.stringify({
-						name: "random movie name",
-						imdb_rating: 4.5
-					}),
-					headers: {
-						"Content-type": "application/json"
-					}
-				}
-			);
-			if (!response.ok) {
-				throw new Error("wtf");
-			}
-			const data = await response.json();
+	const transformedTasks = useCallback(tasksObj => {
+		const loadedTasks = [];
 
-			const transformedMovies = data.results.map(el => {
-				return {
-					id: el.episode_id,
-					title: el.title,
-					openingText: el.opening_crawl,
-					releaseDate: el.release_date,
-				};
-			});
-
-			setMovies(transformedMovies);
-			setIsLoading(false);
-		} catch (error) {
-			console.log(error);
-			setError(error);
+		for (const taskKey in tasksObj) {
+			loadedTasks.push({id: taskKey, text: tasksObj[taskKey].text});
 		}
+
+		setTasks(loadedTasks);
 	}, []);
 
+	const httpData = useHttp(transformedTasks);
+	const {isLoading, error, sendRequest: fetchTasks} = httpData;
+
 	useEffect(() => {
-		fetchMoviesHandler();
-	}, [fetchMoviesHandler]);
+		fetchTasks({url: "https://react-app-869e8-default-rtdb.europe-west1.firebasedatabase.app/tasks.json"});
+	}, []);
+
+	const taskAddHandler = task => {
+		setTasks(prevTasks => prevTasks.concat(task));
+	};
 
 	return (
 		<React.Fragment>
-			<section>
-				<button onClick={fetchMoviesHandler}>Fetch Movies</button>
-			</section>
-			<section>
-				{!isLoading && movies.length > 0 && <MoviesList movies={movies} />}
-				{!isLoading && movies.length === 0 && <p>Fetch movies to start.</p>}
-				{isLoading && !error && <p>Loading...</p>}
-				{error && (
-					<div>
-						<p>Oopsie woopsie!</p> <p>{error.message}</p>
-					</div>
-				)}
-			</section>
+			<NewTask onAddTask={taskAddHandler} />
+			<Tasks items={tasks}
+				loading={isLoading}
+				error={error}
+				onFetch={fetchTasks}
+			/>
 		</React.Fragment>
 	);
 }
