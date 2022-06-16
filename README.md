@@ -29,7 +29,7 @@
  - [x] 23-nextjs-introduction
  - [x] 24-animations
  - [x] 25-replacing-redux
- - [ ] 26-testing
+ - [x] 26-testing
  - [ ] 27-react-typescript
  - [ ] 28-react-hooks-intro-and-summary
  - [ ] 29-react-summary
