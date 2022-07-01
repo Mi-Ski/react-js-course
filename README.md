@@ -21,7 +21,7 @@
  - [x] 15-building-custom-react-hooks
  - [x] 16-working-with-forms
  - [x] 17-practice-food-order-http-forms
- - [ ] 18-diving-into-redux
+ - [x] 18-diving-into-redux
  - [ ] 19-advanced-redux
  - [ ] 20-building-maps-with-react-router
  - [ ] 21-deploying-react-apps
