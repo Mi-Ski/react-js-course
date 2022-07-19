@@ -20,7 +20,7 @@
  - [x] 14-sending-http-requests
  - [x] 15-building-custom-react-hooks
  - [x] 16-working-with-forms
- - [ ] 17-practice-food-order-http-forms
+ - [x] 17-practice-food-order-http-forms
  - [ ] 18-diving-into-redux
  - [ ] 19-advanced-redux
  - [ ] 20-building-maps-with-react-router
