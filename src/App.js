@@ -1,29 +1,18 @@
-import { useState } from "react";
-
-import Header from "./components/Layout/Header";
-import Meals from "./components/Meals/Meals";
-import Cart from "./components/Cart/Cart";
-import CartProvider from "./store/CartProvider";
+import Counter from "./components/Counter";
+import Header from "./components/Header";
+import Auth from "./components/Auth";
+import UserProfile from "./components/UserProfile";
+import { useSelector} from "react-redux";
 
 function App() {
-	const [cartIsShown, setCartIsShown] = useState(false);
-
-	const showCartHandler = () => {
-		setCartIsShown(true);
-	};
-
-	const hideCartHandler = () => {
-		setCartIsShown(false);
-	};
+	const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
 	return (
-		<CartProvider>
-			{cartIsShown && <Cart onClose={hideCartHandler} />}
-			<Header onShowCart={showCartHandler} />
-			<main>
-				<Meals />
-			</main>
-		</CartProvider>
+		<>
+			<Header />
+			{ isLoggedIn ? <UserProfile /> : <Auth /> }
+			<Counter />
+		</>
 	);
 }
 
