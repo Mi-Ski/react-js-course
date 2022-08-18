@@ -22,7 +22,7 @@
  - [x] 16-working-with-forms
  - [x] 17-practice-food-order-http-forms
  - [x] 18-diving-into-redux
- - [ ] 19-advanced-redux
+ - [x] 19-advanced-redux
  - [ ] 20-building-maps-with-react-router
  - [ ] 21-deploying-react-apps
  - [ ] 22-authentication
