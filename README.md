@@ -27,8 +27,8 @@
  - [x] 21-deploying-react-apps
  - [x] 22-authentication
  - [x] 23-nextjs-introduction
- - [ ] 24-animations
- - [ ] 25-replacing-redux
+ - [x] 24-animations
+ - [x] 25-replacing-redux
  - [ ] 26-testing
  - [ ] 27-react-typescript
  - [ ] 28-react-hooks-intro-and-summary
