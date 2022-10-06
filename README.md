@@ -23,8 +23,8 @@
  - [x] 17-practice-food-order-http-forms
  - [x] 18-diving-into-redux
  - [x] 19-advanced-redux
- - [ ] 20-building-maps-with-react-router
- - [ ] 21-deploying-react-apps
+ - [x] 20-building-maps-with-react-router
+ - [x] 21-deploying-react-apps
  - [ ] 22-authentication
  - [ ] 23-nextjs-introduction
  - [ ] 24-animations
