@@ -25,7 +25,7 @@ function httpReducer(state, action) {
 		};
 	}
 
-	return state
+	return state;
 }
 
 function useHttp(requestFunction, startWithPending = false) {
