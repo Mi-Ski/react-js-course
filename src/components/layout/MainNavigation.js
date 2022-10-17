@@ -1,26 +1,45 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import AuthContext from "../../store/auth-context";
+
 import classes from "./MainNavigation.module.css";
 
-function MainNavigation() {
+const MainNavigation = () => {
+	
+	const logoutHandler = () => {
+		console.log("logged out");
+		authCtx.logout();
+	};
+
+	const authCtx = useContext(AuthContext);
+	const isLoggedIn = authCtx.isLoggedIn;
+
 	return (
 		<header className={classes.header}>
-			<div className={classes.logo}>Great Quotes</div>
-			<div className={classes.nav}>
-				<ul >
-					<li>
-						<NavLink to="/quotes">Quotes</NavLink>
-					</li>
-					<li>
-						<NavLink to="/quotes/new">New Quote</NavLink>
-					</li>
-					<li>
-						<NavLink to="/quotes/:id">Quote Details</NavLink>
-					</li>
+			<Link to="/">
+				<div className={classes.logo}>React Auth</div>
+			</Link>
+			<nav>
+				<ul>
+					{!isLoggedIn && (
+						<li>
+							<Link to="/auth">Login</Link>
+						</li>
+					)}
+					{isLoggedIn && (
+						<li>
+							<Link to="/profile">Profile</Link>
+						</li>
+					)}
+					{isLoggedIn && (
+						<li>
+							<button onClick={logoutHandler}>Logout</button>
+						</li>
+					)}
 				</ul>
-			</div>
+			</nav>
 		</header>
 	);
-}
+};
 
 export default MainNavigation;
