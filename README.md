@@ -25,7 +25,7 @@
  - [x] 19-advanced-redux
  - [x] 20-building-maps-with-react-router
  - [x] 21-deploying-react-apps
- - [ ] 22-authentication
+ - [x] 22-authentication
  - [ ] 23-nextjs-introduction
  - [ ] 24-animations
  - [ ] 25-replacing-redux
