@@ -36,5 +36,5 @@
 		"ecmaVersion": 2018,
 		"ecmaFeatures": { "jsx": true, "experimentalObjectRestSpread": true }
 	},
-	"extends": ["eslint:recommended", "plugin:react/recommended"]
+	"extends": ["eslint:recommended", "plugin:react/recommended", "next/core-web-vitals"]
 }
