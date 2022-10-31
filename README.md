@@ -26,7 +26,7 @@
  - [x] 20-building-maps-with-react-router
  - [x] 21-deploying-react-apps
  - [x] 22-authentication
- - [ ] 23-nextjs-introduction
+ - [x] 23-nextjs-introduction
  - [ ] 24-animations
  - [ ] 25-replacing-redux
  - [ ] 26-testing
