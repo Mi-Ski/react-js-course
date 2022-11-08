@@ -1,13 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
 import Todos from "./components/Todos";
+import NewTodo from "./components/NewTodo";
+import TodosContextProvider from "./store/todos-context";
 
 const App = () => {
+
   return (
-    <div>
-			<Todos items={['sdf']}></Todos>
-    </div>
+    <TodosContextProvider>
+			<NewTodo ></NewTodo>
+			<Todos ></Todos>
+    </TodosContextProvider>
   );
 };
 

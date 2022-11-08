@@ -1,18 +1,22 @@
-import React from 'react'
+import React, {useContext} from "react";
+import { TodosContext } from "../store/todos-context";
+import TodoItem from "./TodoItem";
 
-type AppProps = {
-	items: string[],
-	children?: React.ReactNode
-}
 
-const Todos = ({items}: AppProps) => {
-	return (
-		<ul>
-			{items.map((todo) => (
-				<li key={todo}>{todo}</li>
-			))}
-		</ul>
-	)
-}
+const Todos = () => {
+	const todosCtx = useContext(TodosContext);
 
-export default Todos
+  return (
+    <ul>
+      {todosCtx.items?.map((todo) => (
+        <TodoItem
+          text={todo.text}
+          key={todo.id}
+					onClickItem={() => todosCtx.removeTodo(todo.id)}
+        />
+      ))}
+    </ul>
+  );
+};
+
+export default Todos;
