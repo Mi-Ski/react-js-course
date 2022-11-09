@@ -30,6 +30,6 @@
  - [x] 24-animations
  - [x] 25-replacing-redux
  - [x] 26-testing
- - [ ] 27-react-typescript
+ - [x] 27-react-typescript
  - [ ] 28-react-hooks-intro-and-summary
  - [ ] 29-react-summary
