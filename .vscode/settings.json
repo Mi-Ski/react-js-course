@@ -1,3 +1,4 @@
 {
-	"editor.smoothScrolling": false
+	"editor.smoothScrolling": false,
+	"typescript.validate.enable": true,
 }
